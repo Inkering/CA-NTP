@@ -34,9 +34,11 @@ function setup() {
 				}
 		}
 
-		h = 20
 		b = 50
 		for (var a = 1; a < 30; a += 10) {
+				var h = getRandomArbitrary(10,  30);
+				var b = getRandomArbitrary(1,  50);
+				
 				for (var i = 1; i < 361; i += 1) {
 						position = radians(i);
 						outerPos = radians(i - 1);
@@ -54,7 +56,7 @@ function setup() {
 		}
 
 		let s = 'So it goes.';
-		fill(50);
+		fill(0);
 		textSize(20);
 		text(s, 20, 20, 120, 120); // Text wraps within text box
 }

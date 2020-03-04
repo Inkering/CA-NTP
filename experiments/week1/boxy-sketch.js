@@ -36,7 +36,7 @@ function setup() {
 			coordX = x * size + x * padding + border;
 			coordY = y * size + y * padding + border;
 			rect(coordX, coordY, size, size, 30);
-			
+
 			for (var i = 0; i < 8; i++) {
 				push();
 				translate(coordX + size / 2, coordY + size / 2) 
