@@ -7,30 +7,17 @@
 var picCounter = 1;
 
 function setup() {
+
 		pixelDensity(4.0);
 		var myCanvas = createCanvas(500,500);
 		myCanvas.parent('processing-container');
 		centerX = width/2;
 		centerY = height/2;
-}
 
-function mouseClicked(){
-	// save an image on click, and make sure
-	// not to overwrite old ones.
-	saveCanvas('wk2' + picCounter, 'png');
-	picCounter += 1;
-	return false;
-}
-
-
-function draw() {
-		// let s = 'We Keep Going Down.';
-		// fill(50);
-		// textSize(15);
-		// text(s, 10, 10, 70, 80); // Text wraps within text box
-		var b = 190;
-		var h = 180;
+		var b = 30;
 		for (var a = 1; a < 30; a += 10) {
+				var h = getRandomArbitrary(70,  120);
+				console.log(h)
 				for (var i = 1; i < 361; i += 1) {
 						position = radians(i);
 						outerPos = radians(i - 1);
@@ -65,4 +52,25 @@ function draw() {
 						line(centerX+outerXpos, centerY+outerYpos, centerX+xpos, centerY+ypos);
 				}
 		}
+
+		let s = 'So it goes.';
+		fill(50);
+		textSize(20);
+		text(s, 20, 20, 120, 120); // Text wraps within text box
+}
+
+function mouseClicked(){
+	// save an image on click, and make sure
+	// not to overwrite old ones.
+	saveCanvas('wk2' + picCounter, 'png');
+	picCounter += 1;
+	return false;
+}
+
+function getRandomArbitrary(min, max) {
+    return Math.random() * (max - min) + min;
+}
+
+function draw() {
+		
 }
