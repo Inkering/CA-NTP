@@ -17,6 +17,7 @@ function setup() {
 		var b = 30;
 		for (var a = 1; a < 30; a += 10) {
 				var h = getRandomArbitrary(70,  120);
+				var b = getRandomArbitrary(20,  40);
 				console.log(h)
 				for (var i = 1; i < 361; i += 1) {
 						position = radians(i);
@@ -34,11 +35,10 @@ function setup() {
 				}
 		}
 
-		b = 50
 		for (var a = 1; a < 30; a += 10) {
 				var h = getRandomArbitrary(10,  30);
 				var b = getRandomArbitrary(1,  50);
-				
+
 				for (var i = 1; i < 361; i += 1) {
 						position = radians(i);
 						outerPos = radians(i - 1);
@@ -74,5 +74,5 @@ function getRandomArbitrary(min, max) {
 }
 
 function draw() {
-		
+
 }
